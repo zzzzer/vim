@@ -1,7 +1,7 @@
-so ~/.vim/.vimrc.base
+so ~/.vim/vimrc.base
 
 if v:version >= 700
-  so ~/.vim/.vimrc.extended
+  so ~/.vim/vimrc.extended
 endif
 set number
 if has('gui_running')
