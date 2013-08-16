@@ -1,0 +1,264 @@
+set viminfo=%,'50,\"100,n~/.viminfo
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" DIRECTORIES AND FILES
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"put swap files in a fixed place
+set dir=~/.vim/swp
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" "FIXES"
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"fix that backspace generates 
+"map!  
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" FEATURES
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"Dictionary completion facility is useful when you don't remember the spelling of a word.
+"To make use of this, we must first set the dictionary option so that vim knows where the
+"dictionary is. Following command does that.
+":set dictionary-=~/.vim/dict/systemverilog dictionary+=~/.vim/dict/systemverilog dictionary-=~/.vim/dict/AVM dictionary+=~/.vim/dict/AVM
+":set dictionary+=~/.vim/dict/systemverilog,~/.vim/dict/AVM
+":set dictionary+=~/.vim/dict/AVM
+
+:au BufReadPost * if exists("b:current_syntax")
+:au BufReadPost *   if b:current_syntax == "verilog"
+:au BufReadPost *     let verilog_minlines = 50
+:au BufReadPost *     syntax on
+:au BufReadPost *   endif
+:au BufReadPost * endif
+
+:au BufReadPost * if exists("b:current_syntax")
+:au BufReadPost *   if b:current_syntax == "vhdl"
+:au BufReadPost *     let verilog_minlines = 50
+:au BufReadPost *     syntax on
+:au BufReadPost *   endif
+:au BufReadPost * endif
+
+"associate more wierd sv files ending with the language
+:autocmd  BufNewFile,BufRead *.sv* setfiletype verilog_systemverilog
+
+"Turn color highlighting on
+syntax on
+
+
+"Makes loading and saving views automatic. Saves folds.
+"Result is stored under .vim/view
+"autocmd BufWinLeave * if expand("%") != "" | mkview | endif
+"autocmd BufWinEnter * if expand("%") != "" | loadview | endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" BEHAVIOR
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Highlight searches
+:set hlsearch
+
+"block    Allow virtual editing in Visual block mode.
+"Virtual editing means that the cursor can be positioned where there is no actual character
+set virtualedit=block
+
+"This setting will cause the cursor to very briefly jump to a brace/parenthese/bracket's "match" whenever you type a closing
+"or opening brace/parenthese/bracket. I've had almost no mismatched-punctuation errors since I started using this setting.
+set showmatch
+
+
+" Ignore case in searches excepted if an uppercase letter is used (Both ignorecase and smartcase must be set for this)
+set ignorecase
+set smartcase
+
+" make that backspace key work the way it should
+" allow <BkSpc> to delete line breaks, beyond the start of the current
+" insertion, and over indentations:
+set backspace=eol,start,indent
+
+" don't make it look like there are line breaks where there aren't:
+set nowrap
+
+" use indents of 2 spaces, and have them copied down lines:
+"Set spaces to insert when indenting ie. not inserting spaces between literals <TAB>
+set shiftwidth=2
+"Set spaces to insert when inserting spaces between literals <ctrl-TAB>
+set softtabstop=2 " makes the spaces feel like real tabs, i.e. backspace deletes 2 spaces
+set tabstop=8 " Force tabs to be displayed/expanded to 4 spaces (instead of default 8).
+set shiftround
+set expandtab
+set autoindent
+" make it so you can open other files without being forced to save current buffer...
+set hidden 
+" This defines what bases Vim will consider for numbers when using the CTRL-A and CTRL-X commands (default: nrformats=octal,hex)
+set nrformats="hex"
+
+" have command-line completion <Tab> (for filenames, help topics, option names)
+" first list the available options and complete the longest common part, then
+" have further <Tab>s cycle through the possibilities:
+set wildmode=list:longest,full
+
+autocmd FileType make set noexpandtab
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" APPEARANCE
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"show tabs, EOL etc.
+set list
+set lcs=tab:»·   "show tabs
+set lcs+=trail:· "show trailing spaces
+
+" When nonempty, this option determines the content of the status line
+"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+set statusline=%F%m%r%h%w\ [HEX=%02.2B]\ [POS=%04l,%04v]
+
+"Turn completion popup off 
+"   set completeopt=
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Files/Backups
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" make backup file
+set backup
+set writebackup
+
+" where to put backup file (don't forget to make a backup directory)
+set backupdir=~/.vim/backup
+
+" directory is the directory for temp file
+set directory=~/.vim/tmp
+
+
+:au BufWritePre * let &backupext = '_' . strftime("%Y%m%d_%Hh")
+
+:let backupskip = escape(expand('$HOME'), '\') . '/tmp/*' . ',' . '*.sig' . ',' . '^tmp\d\d\d\d\d'
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Header related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:SV_AuthorName   = 'Ashraf Mian'
+let g:SV_Department   = 'EAB/FBM/RF'
+let g:SV_Email        = 'ashraf.mian@ericsson.com'
+let g:SV_Company      = 'Ericsson AB'
+let g:SV_Project      = ''
+let g:SV_AuthorRef    = 'EASHMIA'
+let g:SV_CopyrightHolder = 'Ericsson'
+
+let g:call_arg        = 'Default CALL_ARG'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" KEY BINDINGS/MAPPINGS
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let mapleader="-"
+
+map <Leader>w <C-w>w
+map <Leader>nn ]'
+map <Leader>pp ['
+"Use alt-space as escape -- works even on a (Linux) console:
+inoremap <M-Space> <Esc>
+
+" have <Tab> (and <Shift>+<Tab> where it works) change the level of
+" indentation:
+inoremap <Tab> <C-T>
+inoremap <S-Tab> <C-D>
+" [<Ctrl>+V <Tab> still inserts an actual tab character.]
+
+" have \tp ("toggle paste") toggle paste on/off and report the change, and
+" where possible also have <F4> do this both in normal and insert mode:
+nnoremap \tp :set invpaste paste?<CR>
+nmap <F4> \tp
+imap <F4> <C-O>\tp
+set pastetoggle=<F4>
+" Emacs-like beginning and end of line.
+imap <c-e> <c-o>$
+imap <c-a> <c-o>^
+"
+" disable highlight after search
+map <F6>  :noh <CR> 
+
+"map <F9>  :!ct co %
+"map <F10> :!ct ci %
+"map <F11> :!ct co -unre %
+"map <F12> :!ct unco -keep %
+" list buffer then choose one
+:nnoremap <F5> :buffers<CR>:buffer<Space>
+" TAGS
+"jump to tag
+map <A-.> 
+
+map <A-'> 
+map <A-:> :ts 
+map <A-_> }
+map <A--> :pc
+
+" :Q => :q 
+command! Q q
+" Map ctrl-x to escape to get a more convinient environment
+"imap <C-x> <ESC>
+
+
+"map <C-z> :echo "BLOCKED: The 'CTRL-Z' quit functionality has been disabled. Please use ':q' instead"
+
+"Removes white space at end of line
+"nnoremap <F8> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>remap <F8> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+nnoremap <F8> :%s:\s*$::<CR>
+"| :%s:\t:  :g<CR>
+
+" Commenting/uncommenting
+vnoremap <F2> :s:^://:<CR>
+vnoremap <F3> :s:^//::<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" ABBREVIATIONS
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+:ab #b #######################################
+:ab /b //=====================================
+:ab b= =======================================
+
+"Turn off the f***ing beeping!
+"set vb
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" MISC
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set noerrorbells
+set visualbell
+"set t_vb='' "-this doesn't seem to work
+autocmd VimEnter * set vb t_vb=
+
+
+" default is: set complete=.,w,b,u,t,i   where  the 't' is for tags
+" see http://www.vim.org/htmldoc/options.html#%27complete%27
+set complete=.,w,b,u,i
+
+
+"""""""""""file paths and stuff
+" Copy current buffer path relative to root of VIM session to system clipboard
+nnoremap <Leader>yp :let @*=expand("%")<cr>:echo "Copied file path to clipboard"<cr>
+" Copy current filename to system clipboard
+nnoremap <Leader>yf :let @*=expand("%:t")<cr>:echo "Copied file name to clipboard"<cr>
+" Copy current buffer path without filename to system clipboard
+nnoremap <Leader>yd :let @*=expand("%:h")<cr>:echo "Copied file directory to clipboard"<cr>
+
+

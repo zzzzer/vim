@@ -1,0 +1,12 @@
+backup
+dict
+filetype.vim
+ftdetect
+indent
+personal_notes
+plugin
+swp
+syntax
+tmp
+_unplugged
+view

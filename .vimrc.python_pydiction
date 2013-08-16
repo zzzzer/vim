@@ -1,0 +1,7 @@
+
+
+
+filetype plugin on
+
+let g:pydiction_location = '/home/eashmia/.vim/bundle/pydiction/complete-dict'
+

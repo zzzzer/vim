@@ -1,0 +1,73 @@
+import avm_pkg::*;
+import std_tb_pkg::*;
+import log_pkg::*;
+
+import transactions_pkg::*;
+import transactors_pkg::*;
+
+//----------------------------------------------------------------------
+// CLASS |CALL_ARG|
+//----------------------------------------------------------------------
+class |CALL_ARG| extends avm_named_component;
+
+  //----------------------------------------------------------------
+  // TLM ports imports and exports
+  //----------------------------------------------------------------
+  // <none>
+
+  //----------------------------------------------------------------
+  // TLM channels and interface
+  //----------------------------------------------------------------
+  // <none>
+
+  //----------------------------------------------------------------
+  // Variables and constants declarations
+  //----------------------------------------------------------------
+
+  // Log Manager
+  local log_manager log = log_manager::get_default_log(); // Default log
+  local log_manager llog; // Local log
+
+
+  //----------------------------------------------------------------
+  // Constructor
+  //----------------------------------------------------------------
+  function new(string name, avm_named_component parent);
+    super.new(name, parent);
+    llog = new({name, "_log"}, this, {name, ".log"}); // Local log
+
+    // Construct TLM channels and ports
+    //...
+  endfunction // new
+
+  //----------------------------------------------------------------
+  // Export connection
+  //----------------------------------------------------------------
+  function void export_connections();
+    // <Nothing to do>
+  endfunction
+
+  //----------------------------------------------------------------
+  // Connect
+  //----------------------------------------------------------------
+  function void connect();
+    // <Nothing to do>
+  endfunction
+
+  //----------------------------------------------------------------
+  // Import connection
+  //----------------------------------------------------------------
+  function void import_connections();
+    // <Nothing to do>
+  endfunction
+
+
+  //----------------------------------------------------------------
+  // run
+  //----------------------------------------------------------------
+  task run();
+    // <TBD>
+  endtask // run
+
+
+endclass // |CALL_ARG|
