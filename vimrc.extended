@@ -74,7 +74,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 call pathogen#infect() 
 syntax on
 filetype plugin indent on
-
+call add(g:pathogen_disabled, 'command-t')
 
 "ctrl p plugin 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -95,7 +95,7 @@ set nocompatible               " be iMproved
 
 " python stuff
 "so ~/.vimrc.python
-so ~/.vim/.vimrc.python_pydiction
+"so ~/.vim/.vimrc.python_pydiction
  "so ~/.vimrc.python_jedi
 
 
