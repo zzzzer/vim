@@ -70,32 +70,32 @@ autocmd VimEnter * wincmd p
 " shut down vim if nerdtree is the last window 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+
+
+
+"remapping this in tasklist from leader t to leader v to resolve conflict with other plugins
+map <leader>v <Plug>TaskList
+
 "use  pathogen for installation for plugins that use
+
+
+
+
 call pathogen#infect() 
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+
+
 syntax on
 filetype plugin indent on
-call add(g:pathogen_disabled, 'command-t')
 
 "ctrl p plugin 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 
-"vundle manger for those that need it
-set nocompatible               " be iMproved
- filetype off                   " required!
-
- set rtp+=~/.vim/bundle/vundle/
- call vundle#rc()
-
- " let Vundle manage Vundle
- " required! 
- Bundle 'gmarik/vundle'
- Bundle  'Valloric/YouCompleteMe'
-
 
 " python stuff
-"so ~/.vimrc.python
-"so ~/.vim/.vimrc.python_pydiction
- "so ~/.vimrc.python_jedi
+so ~/.vim/vimrc.python
 
 
