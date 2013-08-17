@@ -54,7 +54,7 @@
 	url = https://github.com/kien/ctrlp.vim.git
 [submodule "bundle/tabular"]
 	path = bundle/tabular
-	url = https://github.com/godlygeek/tabular
+	url = https://github.com/godlygeek/tabular.git
 [submodule "bundle/vim-unimpared"]
 	path = bundle/vim-unimpared
-	url = https://github.com/tpope/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
