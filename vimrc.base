@@ -168,6 +168,16 @@ let g:call_arg        = 'Default CALL_ARG'
 
 let mapleader="-"
 
+
+"editing files using relative path to file
+
+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
+
+
 map <Leader>w <C-w>w
 map <Leader>nn ]'
 map <Leader>pp ['
