@@ -73,8 +73,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 
 
-"remapping this in tasklist from leader t to leader v to resolve conflict with other plugins
-map <leader>v <Plug>TaskList
+"remapping this in tasklist from leader t to leader tt to resolve conflict with other plugins
+map <leader>tt <Plug>TaskList
 
 "use  pathogen for installation for plugins that use
 

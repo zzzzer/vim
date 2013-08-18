@@ -178,7 +178,14 @@ map <leader>ev :vsp %%
 map <leader>et :tabe %%
 
 
+"moving around in widows
 map <Leader>w <C-w>w
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+
 map <Leader>nn ]'
 map <Leader>pp ['
 "Use alt-space as escape -- works even on a (Linux) console:
@@ -201,14 +208,14 @@ imap <c-e> <c-o>$
 imap <c-a> <c-o>^
 "
 " disable highlight after search
-map <F6>  :noh <CR> 
+map <F2>  :noh <CR> 
 
 "map <F9>  :!ct co %
 "map <F10> :!ct ci %
 "map <F11> :!ct co -unre %
 "map <F12> :!ct unco -keep %
 " list buffer then choose one
-:nnoremap <F5> :buffers<CR>:buffer<Space>
+:nnoremap <F3> :buffers<CR>:buffer<Space>
 " TAGS
 "jump to tag
 map <A-.> 

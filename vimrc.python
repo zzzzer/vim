@@ -5,3 +5,8 @@ let g:SuperTabDefaultCompletionType = "context"
 set completeopt=menuone,longest,preview
 
 au FileType python set omnifunc=pythoncomplete#Complete
+
+syntax on                           " syntax highlighing
+filetype on                          " try to detect filetypes
+filetype plugin indent on    " enable loading indent file for filetype
+
