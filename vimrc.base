@@ -239,8 +239,8 @@ nnoremap <F8> :%s:\s*$::<CR>
 "| :%s:\t:  :g<CR>
 
 " Commenting/uncommenting
-vnoremap <F2> :s:^://:<CR>
-vnoremap <F3> :s:^//::<CR>
+"vnoremap <F2> :s:^://:<CR>
+"vnoremap <F3> :s:^//::<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
