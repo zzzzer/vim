@@ -186,6 +186,18 @@ map <c-l> <c-w>l
 map <c-h> <c-w>h
 
 
+
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+cnoremap <C-b> <Left>
+cnoremap <C-f> <Right>
+cnoremap <M-b> <S-Left>
+cnoremap <M-f> <S-Right>
+
+
+
 map <Leader>nn ]'
 map <Leader>pp ['
 "Use alt-space as escape -- works even on a (Linux) console:
@@ -216,6 +228,7 @@ map <F2>  :noh <CR>
 "map <F12> :!ct unco -keep %
 " list buffer then choose one
 :nnoremap <F3> :buffers<CR>:buffer<Space>
+:nnoremap <F6> :NERDTreeFind<CR>
 " TAGS
 "jump to tag
 map <A-.> 
