@@ -62,6 +62,7 @@ if v:version >= 700
   set guitablabel=%{GuiTabLabel()}
 endif
 " use nerdtree
+if has('gui_running')
 autocmd VimEnter * NERDTree
 " remove the wierd characters you get sometimes and use plus instead for browsing
 let g:NERDTreeDirArrows=0
@@ -69,7 +70,7 @@ let g:NERDTreeDirArrows=0
 autocmd VimEnter * wincmd p
 " shut down vim if nerdtree is the last window 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
+endif 
 
 
 
