@@ -13,9 +13,6 @@
 if has("gui_running")
   :colorscheme zenburn
   ":colorscheme eclipse
-endif
-
-if has("gui_running")
     if has("gui_gtk2")
         set guifont=Courier\ New\ 9
     elseif has("gui_kde")
@@ -25,6 +22,14 @@ if has("gui_running")
     else
         set guifont=Courier_New:h11:cDEFAULT
     endif
+" use nerdtree
+autocmd VimEnter * NERDTree
+" remove the wierd characters you get sometimes and use plus instead for browsing
+let g:NERDTreeDirArrows=0
+" jump to previous windows after opening nerdtree 
+autocmd VimEnter * wincmd p
+" shut down vim if nerdtree is the last window 
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 endif
 
 "
@@ -61,16 +66,6 @@ if v:version >= 700
   endfun
   set guitablabel=%{GuiTabLabel()}
 endif
-" use nerdtree
-if has('gui_running')
-autocmd VimEnter * NERDTree
-" remove the wierd characters you get sometimes and use plus instead for browsing
-let g:NERDTreeDirArrows=0
-" jump to previous windows after opening nerdtree 
-autocmd VimEnter * wincmd p
-" shut down vim if nerdtree is the last window 
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-endif 
 
 
 
