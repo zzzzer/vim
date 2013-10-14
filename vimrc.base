@@ -255,6 +255,13 @@ nnoremap <F8> :%s:\s*$::<CR>
 "vnoremap <F2> :s:^://:<CR>
 "vnoremap <F3> :s:^//::<CR>
 
+
+"CTRL-S is nice  for saving, also in Insert mode
+noremap <C-S> :update<CR>
+vnoremap <C-S> <C-C>:update<CR>
+inoremap <C-S> <C-O>:update<CR>
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 " ABBREVIATIONS
