@@ -99,7 +99,8 @@ set autoindent
 set hidden 
 " This defines what bases Vim will consider for numbers when using the CTRL-A and CTRL-X commands (default: nrformats=octal,hex)
 set nrformats="hex"
-
+" use mouse even in non gui mode
+set mouse=a
 " have command-line completion <Tab> (for filenames, help topics, option names)
 " first list the available options and complete the longest common part, then
 " have further <Tab>s cycle through the possibilities:
