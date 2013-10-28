@@ -197,7 +197,10 @@ cnoremap <C-f> <Right>
 cnoremap <M-b> <S-Left>
 cnoremap <M-f> <S-Right>
 
-
+"Some ctags shortcuts
+map <leader>ta <C-]>
+map <leader>ts <C-w><C-]>
+map <leader>tv  :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 map <Leader>nn ]'
 map <Leader>pp ['
@@ -258,9 +261,9 @@ nnoremap <F8> :%s:\s*$::<CR>
 
 
 "CTRL-S is nice  for saving, also in Insert mode
-noremap <C-S> :update<CR>
-vnoremap <C-S> <C-C>:update<CR>
-inoremap <C-S> <C-O>:update<CR>
+"noremap <C-S> :update<CR>
+"vnoremap <C-S> <C-C>:update<CR>
+"inoremap <C-S> <C-O>:update<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
