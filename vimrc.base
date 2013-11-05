@@ -171,7 +171,9 @@ let mapleader="-"
 
 
 "editing files using relative path to file
-
+"name of file 
+cnoremap %& <C-R>=fnameescape(expand('%:t'))<cr>
+"path to file 
 cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
 map <leader>ew :e %%
 map <leader>es :sp %%
