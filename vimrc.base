@@ -145,8 +145,9 @@ set directory=~/.vim/tmp
 
 :let backupskip = escape(expand('$HOME'), '\') . '/tmp/*' . ',' . '*.sig' . ',' . '^tmp\d\d\d\d\d'
 
-
-
+"lets not use some silly ecoding other than utf-8
+:set encoding=utf-8
+:set fileencodings=utf-8
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Header related
