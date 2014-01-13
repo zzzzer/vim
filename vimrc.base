@@ -62,6 +62,13 @@ syntax on
 " BEHAVIOR
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"dont show unprintable chars unless specified (set list)
+set nolist
+
+"automatially change the vim path to the working buffer
+set autochdir
+
+
 "Highlight searches
 :set hlsearch
 
@@ -116,8 +123,8 @@ autocmd FileType make set noexpandtab
 
 "show tabs, EOL etc.
 set list
-set lcs=tab:»·   "show tabs
-set lcs+=trail:· "show trailing spaces
+set lcs=tab:??   "show tabs
+set lcs+=trail:? "show trailing spaces
 
 " When nonempty, this option determines the content of the status line
 "set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
