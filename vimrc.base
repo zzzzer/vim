@@ -46,7 +46,7 @@ set dir=~/.vim/swp
 :au BufReadPost * endif
 
 "associate more wierd sv files ending with the language
-:autocmd  BufNewFile,BufRead *.sv* setfiletype verilog_systemverilog
+:autocmd  BufNewFile,BufRead *.sv* setfiletype systemverilog
 
 "Turn color highlighting on
 syntax on
