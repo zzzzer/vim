@@ -262,6 +262,8 @@ command! Q q
 
 "Removes white space at end of line
 "nnoremap <F8> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>remap <F8> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+"toggle remove special characters and wrap lines around word
+:nnoremap <F7> :set invlist invwrap invlinebreak<CR> 
 nnoremap <F8> :%s:\s*$::<CR>
 "| :%s:\t:  :g<CR>
 
