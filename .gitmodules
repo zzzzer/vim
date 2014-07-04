@@ -76,3 +76,9 @@
 [submodule "bundle/undotree"]
 	path = bundle/undotree
 	url = https://github.com/mbbill/undotree
+[submodule "autoload/autoload"]
+	path = autoload/autoload
+	url = https://github.com/tpope/vim-pathogen
+[submodule "autoload/vim-pathogen"]
+	path = autoload/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen
