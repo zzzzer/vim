@@ -82,3 +82,6 @@
 [submodule "autoload/vim-pathogen"]
 	path = autoload/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen
+[submodule "bundle/vim-dispatch"]
+	path = bundle/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch

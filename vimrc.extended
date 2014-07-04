@@ -77,8 +77,8 @@ map <leader>tt <Plug>TaskList
 
 
 execute pathogen#infect() 
-execute pathogen#incubate()
-execute pathogen#helptags()
+"call pathogen#incubate()
+call pathogen#helptags()
 syntax on
 filetype plugin indent on
 
