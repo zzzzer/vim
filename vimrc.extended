@@ -76,13 +76,9 @@ map <leader>tt <Plug>TaskList
 
 
 
-so  ~/.vim/bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect() 
 call pathogen#incubate()
 call pathogen#helptags()
-
-
-
 syntax on
 filetype plugin indent on
 
