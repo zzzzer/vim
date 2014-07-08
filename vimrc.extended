@@ -86,7 +86,6 @@ filetype plugin indent on
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 
-
 " python stuff
 so ~/.vim/vimrc.python
 
