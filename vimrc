@@ -9,4 +9,6 @@ if has('gui_running')
   set lines=70 columns=150
   winpos 10 0
   set guifont=DejaVu\ Sans\ Mono\ 10 
+  "this doesnt work so good with nx in non 'gui' mode
+
 endif
