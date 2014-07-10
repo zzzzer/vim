@@ -128,7 +128,7 @@ set lcs+=trail:? "show trailing spaces
 
 " When nonempty, this option determines the content of the status line
 "set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
-set statusline=%F%m%r%h%w\ [HEX=%02.2B]\ [POS=%04l,%04v]
+"set statusline=%F%m%r%h%w\ [HEX=%02.2B]\ [POS=%04l,%04v]
 
 "Turn completion popup off 
 "   set completeopt=
@@ -254,6 +254,7 @@ map <A--> :pc
 
 " :Q => :q 
 command! Q q
+command! W w
 " Map ctrl-x to escape to get a more convinient environment
 "imap <C-x> <ESC>
 

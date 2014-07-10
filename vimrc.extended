@@ -22,7 +22,7 @@ if has("gui_running")
     "else
         "set guifont=Courier_New:h11:cDEFAULT
     "endif
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim 
+"set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim 
 " use nerdtree
 autocmd VimEnter * NERDTree
 " remove the wierd characters you get sometimes and use plus instead for browsing
