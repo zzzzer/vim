@@ -88,3 +88,9 @@
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = https://github.com/bling/vim-airline
+[submodule "bundle/vim-perl"]
+	path = bundle/vim-perl
+	url = https://github.com/vim-perl/vim-perl
+[submodule "bundle/vim-maximizer"]
+	path = bundle/vim-maximizer
+	url = https://github.com/szw/vim-maximizer
