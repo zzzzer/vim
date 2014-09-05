@@ -241,7 +241,7 @@ map <F2>  :noh <CR>
 "map <F11> :!ct co -unre %
 "map <F12> :!ct unco -keep %
 " list buffer then choose one
-:nnoremap <F3> :buffers<CR>:buffer<Space>
+:nnoremap <F5> :buffers<CR>:buffer<Space>
 :nnoremap <F6> :NERDTreeFind<CR>
 " TAGS
 "jump to tag

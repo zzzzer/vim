@@ -94,3 +94,6 @@
 [submodule "bundle/vim-maximizer"]
 	path = bundle/vim-maximizer
 	url = https://github.com/szw/vim-maximizer
+[submodule "bundle/vim-signature"]
+	path = bundle/vim-signature
+	url = https://github.com/kshenoy/vim-signature
