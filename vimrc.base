@@ -190,7 +190,7 @@ map <leader>et :tabe %%
 
 
 "moving around in widows
-map <Leader>w <C-w>w
+"map <Leader>w <C-w>w
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
@@ -252,7 +252,7 @@ map <A-:> :ts 
 map <A-_> }
 map <A--> :pc
 
-nnoremap . :
+nnoremap , :
 " :Q => :q 
 command! Q q
 command! W w
