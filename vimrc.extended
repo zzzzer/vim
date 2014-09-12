@@ -68,7 +68,16 @@ if v:version >= 700
   set guitablabel=%{GuiTabLabel()}
 endif
 
-
+function! ClearRegisters()
+    let regs='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-="*+'
+    let i=0
+    while (i<strlen(regs))
+        exec 'let @'.regs[i].'=""'
+        let i=i+1
+    endwhile
+endfunction
+ 
+command! ClearRegisters call ClearRegisters()
 
 "remapping this in tasklist from leader t to leader tt to resolve conflict with other plugins
 map <leader>tt <Plug>TaskList
