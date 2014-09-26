@@ -1,0 +1,14 @@
+
+"Reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
+
+"Improve up/down movement on wrapped lines
+nnoremap j gj
+nnoremap k gk
+
+"Lets not use up down and so keys since its not effective !
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
