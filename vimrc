@@ -1,4 +1,5 @@
 so ~/.vim/vimrc.base
+so ~/.vim/vimrc.vimbits
 
 if v:version >= 700
   so ~/.vim/vimrc.extended
