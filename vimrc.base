@@ -252,7 +252,6 @@ map <A-:> :ts 
 map <A-_> }
 map <A--> :pc
 
-nnoremap , :
 " :Q => :q 
 command! Q q
 command! W w
