@@ -284,9 +284,9 @@ nnoremap <F8> :%s:\s*$::<CR>
 " ABBREVIATIONS
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-:ab #b #######################################
-:ab /b //=====================================
-:ab b= =======================================
+":ab #b #######################################
+":ab /b //=====================================
+":ab b= =======================================
 
 "Turn off the f***ing beeping!
 "set vb
@@ -308,6 +308,8 @@ set complete=.,w,b,u,i
 
 
 """""""""""file paths and stuff
+" show file name 
+nnoremap <Leader>ff :<Esc>:echo expand('%:p')<cr>
 " Copy current buffer path relative to root of VIM session to system clipboard
 nnoremap <Leader>yp :let @*=expand("%")<cr>:echo "Copied file path to clipboard"<cr>
 " Copy current filename to system clipboard
