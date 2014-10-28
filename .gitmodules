@@ -100,3 +100,6 @@
 [submodule "bundle/taboo"]
 	path = bundle/taboo
 	url = https://github.com/gcmt/taboo.vim
+[submodule "bundle/vim-eunuch"]
+	path = bundle/vim-eunuch
+	url = https://github.com/tpope/vim-eunuch
