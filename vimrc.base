@@ -130,6 +130,13 @@ set lcs+=trail:? "show trailing spaces
 "set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 "set statusline=%F%m%r%h%w\ [HEX=%02.2B]\ [POS=%04l,%04v]
 
+
+"vim airline setting
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+
 "Turn completion popup off 
 "   set completeopt=
 
@@ -242,7 +249,7 @@ map <F2>  :noh <CR>
 "map <F12> :!ct unco -keep %
 " list buffer then choose one
 :nnoremap <F5> :buffers<CR>:buffer<Space>
-:nnoremap <F6> :NERDTreeFind<CR>
+":nnoremap <F6> :NERDTreeFind<CR>
 " TAGS
 "jump to tag
 map <A-.> 
