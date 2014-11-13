@@ -58,6 +58,10 @@ bindkey -M vicmd 'j' history-substring-search-down
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+#tab moves forward. =>  shift tab => backwords 
+bindkey '^[[Z' reverse-menu-complete
+
+
 source $ZSH/oh-my-zsh.sh
 
 # USER CONFIGURATION
