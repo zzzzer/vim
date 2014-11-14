@@ -46,7 +46,7 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode colored-man zsh-syntax-highlighting)
+plugins=(git vi-mode dircycle colored-man zsh-syntax-highlighting)
 #search 
 source $ZSH/plugins/history-substring-search/history-substring-search.zsh
 
@@ -77,6 +77,11 @@ source ~/.bash_aliases
 #source /home/eashmia/modules/define_modules
 #source /proj/westcoastasic/setup/define_modules
 export IGNOREEOF=40 #
+
+#some scripts being sourced use setenv 
+function setenv() {
+export "$1=$2"
+}
 
 
 bindkey "^[[1~" vi-beginning-of-line   # Home
