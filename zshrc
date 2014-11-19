@@ -68,6 +68,9 @@ source $ZSH/oh-my-zsh.sh
 #complettion of .. to ../
 zstyle ':completion:*' special-dirs true
 
+#show hidden files !
+setopt glob_dots
+
 #ctrl a and ctrl e is still nice to have even in vi mode
 bindkey '^A' beginning-of-line
 bindkey '^E' end-of-line
@@ -81,6 +84,11 @@ export IGNOREEOF=40 #
 #some scripts being sourced use setenv 
 function setenv() {
 export "$1=$2"
+}
+
+function clean_var() {
+echo $1
+typeset -U $1
 }
 
 
