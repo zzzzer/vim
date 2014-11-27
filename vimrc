@@ -3,6 +3,7 @@ so ~/.vim/vimrc.vimbits
 
 if v:version >= 700
   so ~/.vim/vimrc.extended
+  so ~/.vim/vimrc.easymotion_incsearch
 endif
 set number
 if has('gui_running')
