@@ -241,7 +241,8 @@ imap <c-e> <c-o>$
 imap <c-a> <c-o>^
 "
 " disable highlight after search
-map <F2>  :noh <CR> 
+" not needed with incsearch plugin
+" map <F2>  :noh <CR> 
 
 "map <F9>  :!ct co %
 "map <F10> :!ct ci %
