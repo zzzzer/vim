@@ -68,7 +68,9 @@ source $ZSH/oh-my-zsh.sh
 zstyle ':completion:*' special-dirs true
 
 #show hidden files !
-setopt glob_dots
+#setopt glob_dots
+#Ignore duplicates in history
+setopt hist_ignore_all_dups
 
 #ctrl a and ctrl e is still nice to have even in vi mode
 bindkey '^A' beginning-of-line
