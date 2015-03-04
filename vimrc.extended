@@ -96,7 +96,11 @@ filetype plugin indent on
 
 "ctrl p plugin 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-
+" Ignore some folders and files for CtrlP indexing
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|__pycache__|\.yardoc\|\.ropeproject$',
+  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+  \ }
 " python stuff
 so ~/.vim/vimrc.python
 
