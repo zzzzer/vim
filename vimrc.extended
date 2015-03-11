@@ -85,7 +85,7 @@ command! ClearRegisters call ClearRegisters()
 map <leader>tt <Plug>TaskList
 
 "use  pathogen for installation for plugins that use
-
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 
 
 execute pathogen#infect() 
@@ -102,6 +102,5 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
   \ }
 " python stuff
-so ~/.vim/vimrc.python
 
 
