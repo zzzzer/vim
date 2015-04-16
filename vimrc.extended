@@ -59,8 +59,7 @@ if v:version >= 700
         if wincount > 1
                 let label .= ', '.wincount
         endif
-        let label .= '] '
-
+        let label .= '] ' 
         " add the file name without path information
         let n = bufname(buflist[tabpagewinnr(v:lnum) - 1])
         let label .= fnamemodify(n, ':t')
@@ -80,6 +79,9 @@ function! ClearRegisters()
 endfunction
  
 command! ClearRegisters call ClearRegisters()
+
+"clean fugitive buffers when not being viewed
+autocmd BufReadPost fugitive://* set bufhidden=deleteautocmd BufReadPost fugitive://* set bufhidden=delete
 
 "remapping this in tasklist from leader t to leader tt to resolve conflict with other plugins
 map <leader>tt <Plug>TaskList
