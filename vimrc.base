@@ -112,6 +112,11 @@ set mouse=a
 " have further <Tab>s cycle through the possibilities:
 set wildmode=list:longest,full
 
+"integrate with systembuffer (auto "+)
+if has('unnamedplus')
+    set clipboard=unnamed,unnamedplus
+endif
+
 autocmd FileType make set noexpandtab
 
 
