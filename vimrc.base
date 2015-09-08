@@ -7,7 +7,7 @@ set viminfo=%,'50,\"100,n~/.viminfo
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "put swap files in a fixed place
-set dir=~/.vim/swp
+set dir=~/.vim/swp//
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
@@ -174,10 +174,10 @@ set backup
 set writebackup
 
 " where to put backup file (don't forget to make a backup directory)
-set backupdir=~/.vim/backup
+set backupdir=~/.vim/backup//
 
 " directory is the directory for temp file
-set directory=~/.vim/tmp
+set directory=~/.vim/tmp//
 
 
 :au BufWritePre * let &backupext = '_' . strftime("%Y%m%d_%Hh")
