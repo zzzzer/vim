@@ -35,40 +35,6 @@ autocmd VimEnter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 endif
 
-"
-" Controls how file tabs are displayed
-"
-" Forinfo on this one, see http://blog.golden-ratio.net/2008/08/19/using-tabs-in-vim/
-"
-if v:version >= 700
-  function! GuiTabLabel()
-        " add the tab number
-        let label = '['.tabpagenr()
-
-        " modified since the last save?
-        let buflist = tabpagebuflist(v:lnum)
-        for bufnr in buflist
-                if getbufvar(bufnr, '&modified')
-                        let label .= '*'
-                        break
-                endif
-        endfor
-
-        " count number of open windows in the tab
-        let wincount = tabpagewinnr(v:lnum, '$')
-        if wincount > 1
-                let label .= ', '.wincount
-        endif
-        let label .= '] ' 
-        " add the file name without path information
-        let n = bufname(buflist[tabpagewinnr(v:lnum) - 1])
-        let label .= fnamemodify(n, ':t')
-
-        return label
-  endfun
-  set guitablabel=%{GuiTabLabel()}
-endif
-
 function! ClearRegisters()
     let regs='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-="*+'
     let i=0
