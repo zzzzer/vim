@@ -115,3 +115,7 @@
 [submodule "bundle/robotframework-vim"]
 	path = bundle/robotframework-vim
 	url = https://github.com/mfukar/robotframework-vim
+[submodule "bundle/promptline.vim"]
+	path = bundle/promptline.vim
+	url = https://github.com/edkolev/promptline.vim
+	branch = master
