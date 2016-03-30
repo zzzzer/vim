@@ -122,3 +122,6 @@
 [submodule "bundle/vim-plugin-AnsiEsc"]
 	path = bundle/vim-plugin-AnsiEsc
 	url = https://github.com/powerman/vim-plugin-AnsiEsc
+[submodule "bundle/unite.vim"]
+	path = bundle/unite.vim
+	url = https://github.com/Shougo/unite.vim
