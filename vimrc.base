@@ -24,12 +24,6 @@ set dir=~/.vim/swp//
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"Dictionary completion facility is useful when you don't remember the spelling of a word.
-"To make use of this, we must first set the dictionary option so that vim knows where the
-"dictionary is. Following command does that.
-":set dictionary-=~/.vim/dict/systemverilog dictionary+=~/.vim/dict/systemverilog dictionary-=~/.vim/dict/AVM dictionary+=~/.vim/dict/AVM
-":set dictionary+=~/.vim/dict/systemverilog,~/.vim/dict/AVM
-":set dictionary+=~/.vim/dict/AVM
 
 :au BufReadPost * if exists("b:current_syntax")
 :au BufReadPost *   if b:current_syntax == "verilog"
@@ -52,10 +46,6 @@ set dir=~/.vim/swp//
 syntax on
 
 
-"Makes loading and saving views automatic. Saves folds.
-"Result is stored under .vim/view
-"autocmd BufWinLeave * if expand("%") != "" | mkview | endif
-"autocmd BufWinEnter * if expand("%") != "" | loadview | endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
@@ -179,7 +169,12 @@ set backupdir=~/.vim/backup//
 " directory is the directory for temp file
 set directory=~/.vim/tmp//
 
+let $TMPDIR="~/.vim/tmp"
 
+
+"Result is stored under .vim/view
+"autocmd BufWinLeave * if expand("%") != "" | mkview | endif
+"autocmd BufWinEnter * if expand("%") != "" | loadview | endif
 :au BufWritePre * let &backupext = '_' . strftime("%Y%m%d_%Hh")
 
 :let backupskip = escape(expand('$HOME'), '\') . '/tmp/*' . ',' . '*.sig' . ',' . '^tmp\d\d\d\d\d'

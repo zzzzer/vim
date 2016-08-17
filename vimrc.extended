@@ -13,21 +13,6 @@
 if has("gui_running")
   set background=dark
   :colorscheme solarized
-  ":colorscheme zenburn
-  ":colorscheme eclipse
-    "if has("gui_gtk2")
-        "set guifont=Courier\ New\ 9
-    "elseif has("gui_kde")
-        "echoerr "Sorry, please look into your kvim documentation"
-    "elseif has("x11")
-        "set guifont=-*-courier-medium-r-normal-*-*-180-*-*-m-*-*
-    "else
-        "set guifont=Courier_New:h11:cDEFAULT
-    "endif
-"set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim 
-" use nerdtree
-"autocmd VimEnter * NERDTree
-" remove the wierd characters you get sometimes and use plus instead for browsing
 let g:NERDTreeDirArrows=0
 " jump to previous windows after opening nerdtree 
 autocmd VimEnter * wincmd p
@@ -51,6 +36,7 @@ autocmd BufReadPost fugitive://* set bufhidden=deleteautocmd BufReadPost fugitiv
 
 "remapping this in tasklist from leader t to leader tt to resolve conflict with other plugins
 map <leader>tt <Plug>TaskList
+set rtp+=~/.fzf
 
 "use  pathogen for installation for plugins that use
 runtime bundle/vim-pathogen/autoload/pathogen.vim
@@ -76,4 +62,3 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 set laststatus=2
-
