@@ -100,7 +100,8 @@ set mouse=a
 " have command-line completion <Tab> (for filenames, help topics, option names)
 " first list the available options and complete the longest common part, then
 " have further <Tab>s cycle through the possibilities:
-set wildmode=list:longest,full
+set wildmenu
+set wildmode=list:longest,list:full
 
 "integrate with systembuffer (auto "+)
 if has('unnamedplus')
