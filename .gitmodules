@@ -140,3 +140,6 @@
 [submodule "bundle/vim-easy-align"]
 	path = bundle/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align
+[submodule "bundle/verilog_systemverilog.vim"]
+	path = bundle/verilog_systemverilog.vim
+	url = https://github.com/vhda/verilog_systemverilog.vim
