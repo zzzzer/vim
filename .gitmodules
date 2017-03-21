@@ -143,3 +143,6 @@
 [submodule "bundle/verilog_systemverilog.vim"]
 	path = bundle/verilog_systemverilog.vim
 	url = https://github.com/vhda/verilog_systemverilog.vim
+[submodule "bundle/verilog-support"]
+	path = bundle/verilog-support
+	url = https://github.com/jmcneal/verilog-support
