@@ -32,11 +32,14 @@ endfunction
 command! ClearRegisters call ClearRegisters()
 
 "clean fugitive buffers when not being viewed
-autocmd BufReadPost fugitive://* set bufhidden=deleteautocmd BufReadPost fugitive://* set bufhidden=delete
+"autocmd BufReadPost fugitive://* set bufhidden=deleteautocmd BufReadPost fugitive://* set bufhidden=delete
 
 "remapping this in tasklist from leader t to leader tt to resolve conflict with other plugins
 map <leader>tt <Plug>TaskList
 set rtp+=~/.fzf
+
+"ack/ag setup
+let g:ackprg = 'ag --vimgrep'
 
 "use  pathogen for installation for plugins that use
 runtime bundle/vim-pathogen/autoload/pathogen.vim

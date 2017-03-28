@@ -203,7 +203,7 @@ let g:call_arg        = 'Default CALL_ARG'
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let mapleader="-"
+let mapleader="\<Space>"
 
 
 "editing files using relative path to file
