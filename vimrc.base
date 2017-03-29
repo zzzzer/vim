@@ -55,8 +55,10 @@ syntax on
 "dont show unprintable chars unless specified (set list)
 set nolist
 
-"automatially change the vim path to the working buffer
-set autochdir
+"dont like autchdir since its annoying..
+nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
+nnoremap ,e :e <C-R>=expand('%:p:h') . '/'<CR>
+cabbr <expr> %% expand('%:p:h')
 
 "Highlight searches
 :set hlsearch
