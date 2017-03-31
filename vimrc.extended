@@ -41,15 +41,6 @@ set rtp+=~/.fzf
 "ack/ag setup
 let g:ackprg = 'ag --vimgrep'
 
-"use  pathogen for installation for plugins that use
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-
-
-execute pathogen#infect() 
-"call pathogen#incubate()
-call pathogen#helptags()
-syntax on
-filetype plugin indent on
 
 "ctrl p plugin 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -58,7 +49,6 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|__pycache__|\.yardoc\|\.ropeproject$',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
   \ }
-" python stuff
 
 " airline extensions 
 let g:airline#extensions#tabline#enabled = 1

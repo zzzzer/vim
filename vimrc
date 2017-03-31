@@ -1,11 +1,10 @@
 so ~/.vim/vimrc.base
 so ~/.vim/vimrc.vimbits
 
-"if v:version >= 700
-  so ~/.vim/vimrc.extended
-  so ~/.vim/vimrc.python
-  so ~/.vim/vimrc.easymotion_incsearch
-"endif
+so ~/.vim/vimrc.extended
+so ~/.vim/vimrc.python
+so ~/.vim/vimrc.easymotion_incsearch
+
 set number
 if has('gui_running')
 "set the position and size when the window should start and how much

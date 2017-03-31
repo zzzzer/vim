@@ -1,6 +1,5 @@
 set viminfo=%,'50,\"100,n~/.viminfo
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 " DIRECTORIES AND FILES
@@ -46,7 +45,6 @@ set dir=~/.vim/swp//
 syntax on
 
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 " BEHAVIOR
@@ -70,7 +68,6 @@ set virtualedit=block
 "This setting will cause the cursor to very briefly jump to a brace/parenthese/bracket's "match" whenever you type a closing
 "or opening brace/parenthese/bracket. I've had almost no mismatched-punctuation errors since I started using this setting.
 set showmatch
-
 
 " Ignore case in searches excepted if an uppercase letter is used (Both ignorecase and smartcase must be set for this)
 set ignorecase
@@ -149,12 +146,6 @@ set lcs+=trail:? "show trailing spaces
 "set statusline=%F%m%r%h%w\ [HEX=%02.2B]\ [POS=%04l,%04v]
 
 
-"vim airline setting
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-
-
 "Turn completion popup off 
 "   set completeopt=
 
@@ -175,9 +166,6 @@ set directory=~/.vim/tmp//
 let $TMPDIR="~/.vim/tmp"
 
 
-"Result is stored under .vim/view
-"autocmd BufWinLeave * if expand("%") != "" | mkview | endif
-"autocmd BufWinEnter * if expand("%") != "" | loadview | endif
 :au BufWritePre * let &backupext = '_' . strftime("%Y%m%d_%Hh")
 
 :let backupskip = escape(expand('$HOME'), '\') . '/tmp/*' . ',' . '*.sig' . ',' . '^tmp\d\d\d\d\d'
@@ -304,10 +292,6 @@ nnoremap <F8> :%s:\s*$::<CR>
 "vnoremap <F3> :s:^//::<CR>
 
 
-"CTRL-S is nice  for saving, also in Insert mode
-"noremap <C-S> :update<CR>
-"vnoremap <C-S> <C-C>:update<CR>
-"inoremap <C-S> <C-O>:update<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -348,4 +332,21 @@ nnoremap <Leader>yf :let @*=expand("%:t")<cr>:echo "Copied file name to clipboar
 " Copy current buffer path without filename to system clipboard
 nnoremap <Leader>yd :let @*=expand("%:h")<cr>:echo "Copied file directory to clipboard"<cr>
 
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" plugin manager
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+"use  pathogen for installation for plugins that use
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+
+
+execute pathogen#infect() 
+call pathogen#helptags()
+syntax on
+filetype plugin indent on
 
