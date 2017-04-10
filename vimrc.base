@@ -285,6 +285,7 @@ command! W w
 "toggle remove special characters and wrap lines around word
 :nnoremap <F7> :set invlist invwrap invlinebreak<CR> 
 nnoremap <F8> :%s:\s*$::<CR>
+:nnoremap <F9> :setl noai nocin nosi inde=<CR>
 "| :%s:\t:  :g<CR>
 
 " Commenting/uncommenting

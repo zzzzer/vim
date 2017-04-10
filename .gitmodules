@@ -146,3 +146,6 @@
 [submodule "bundle/verilog-support"]
 	path = bundle/verilog-support
 	url = https://github.com/jmcneal/verilog-support
+[submodule "bundle/vim-bundle-mako"]
+	path = bundle/vim-bundle-mako
+	url = https://github.com/sophacles/vim-bundle-mako
