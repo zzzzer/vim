@@ -1,6 +1,7 @@
 so ~/.vim/vimrc.base
 so ~/.vim/vimrc.vimbits
 
+so ~/.vim/vimrc.neocomplete
 so ~/.vim/vimrc.extended
 so ~/.vim/vimrc.python
 so ~/.vim/vimrc.easymotion_incsearch
