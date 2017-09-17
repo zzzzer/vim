@@ -288,9 +288,8 @@ nnoremap <F8> :%s:\s*$::<CR>
 :nnoremap <F9> :setl noai nocin nosi inde=<CR>
 "| :%s:\t:  :g<CR>
 
-" Commenting/uncommenting
-"vnoremap <F2> :s:^://:<CR>
-"vnoremap <F3> :s:^//::<CR>
+map <leader>f :Files <CR>
+map <leader>b :Buffers <CR>
 
 
 
