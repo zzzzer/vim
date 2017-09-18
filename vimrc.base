@@ -290,8 +290,8 @@ nnoremap <F8> :%s:\s*$::<CR>
 
 
 """"""""""""""""" fzf mapping """"""""""""""""""""""""""""""""""
-map <leader>b :call fzf#vim#buffers() <CR>
-map <leader>f :FZF <CR>
+map <leader>b :Buffers <CR>
+map <leader>f :Files <CR>
 
 " Mapping selecting mappings
 nmap <leader><tab> <plug>(fzf-maps-n)
