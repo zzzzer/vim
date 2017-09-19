@@ -290,10 +290,10 @@ nnoremap <F8> :%s:\s*$::<CR>
 
 
 """"""""""""""""" fzf mapping """"""""""""""""""""""""""""""""""
-map <leader>b :Buffers <CR>
 map ,b :Buffers <CR>
-map <leader>f :Files <CR>
 map ,f :Files <CR>
+map ,l :Lines <CR>
+map ,B :BLines <CR>
 
 " Mapping selecting mappings
 nmap <leader><tab> <plug>(fzf-maps-n)
