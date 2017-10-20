@@ -290,6 +290,7 @@ nnoremap <F8> :%s:\s*$::<CR>
 
 
 """"""""""""""""" fzf mapping """"""""""""""""""""""""""""""""""
+map '' :Buffers <CR>
 map ,b :Buffers <CR>
 map ,f :Files <CR>
 map ,l :Lines <CR>
