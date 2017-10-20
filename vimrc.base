@@ -311,6 +311,11 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
 
 
+""""""""""""""""" ALE  """"""""""""""""""""""""""""""""""
+let g:airline#extensions#ale#enabled = 1
+"open loclist  
+let g:ale_open_list = 1
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 " ABBREVIATIONS
