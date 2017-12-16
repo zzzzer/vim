@@ -8,8 +8,7 @@ set viminfo=%,'50,\"100,n~/.viminfo
 "put swap files in a fixed place
 set dir=~/.vim/swp//
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" "
 " "FIXES"
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -361,14 +360,57 @@ nnoremap <Leader>yd :let @*=expand("%:h")<cr>:echo "Copied file directory to cli
 " plugin manager
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"vim plug
+call plug#begin('~/.vim/plugged')
 
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-eunuch' 
+Plug 'tpope/vim-fugitive' 
+Plug 'tpope/vim-surround' 
+Plug 'tpope/vim-unimpaired' 
+Plug 'airblade/vim-gitgutter' 
+Plug 'mileszs/ack.vim' 
+Plug 'w0rp/ale' 
+Plug 'google/yapf' 
+Plug 'timothycrosley/isort' 
+Plug 'Yggdroot/indentLine' 
+Plug 'davidhalter/jedi-vim' 
+Plug 'metakirby5/codi.vim' 
+Plug 'kien/ctrlp.vim' 
+Plug 'junegunn/fzf.vim' 
+Plug 'gregsexton/gitv' 
+Plug 'haya14busa/incsearch.vim' 
+Plug 'Shougo/neocomplete.vim' 
+Plug 'scrooloose/nerdcommenter' 
+Plug 'scrooloose/nerdtree' 
+Plug 'fs111/pydoc.vim' 
+Plug 'godlygeek/tabular' 
+Plug 'majutsushi/tagbar' 
+Plug 'mbbill/undotree' 
+Plug 'jmcneal/verilog-support' 
+Plug 'vhda/verilog_systemverilog.vim' 
+Plug 'bling/vim-airline' 
+Plug 'vim-airline/vim-airline-themes' 
+Plug 'sophacles/vim-bundle-mako' 
+Plug 'altercation/vim-colors-solarized' 
+Plug 'lokaltog/vim-easymotion' 
+Plug 'junegunn/vim-easy-align' 
+Plug 'szw/vim-maximizer' 
+Plug 'vim-perl/vim-perl' 
+Plug 'powerman/vim-plugin-AnsiEsc' 
+Plug 'kshenoy/vim-signature' 
+Plug 'honza/vim-snippets' 
+Plug 'christoomey/vim-tmux-navigator' 
 
-"use  pathogen for installation for plugins that use
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-
-
-execute pathogen#infect() 
-call pathogen#helptags()
-syntax on
-filetype plugin indent on
+call plug#end()
+"indentline plugin setting
+ let g:indentLine_color_term = 239
+ let g:indentLine_color_gui = '#A4E57E'
+ " none X terminal
+ let g:indentLine_color_tty_light = 7 " (default: 4)
+ let g:indentLine_color_dark = 1 " (default: 2)
+ " Background (Vim, GVim)
+ let g:indentLine_bgcolor_term = 202
+ let g:indentLine_bgcolor_gui = '#FF5F00'
+ let g:indentLine_enabled = 0
 
