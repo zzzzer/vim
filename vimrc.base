@@ -245,6 +245,7 @@ inoremap <S-Tab> <C-D>
 nnoremap \tp :set invpaste paste?<CR>
 nmap <F4> \tp
 imap <F4> <C-O>\tp
+map <Leader>p :set paste<CR>o<esc>"*]p:set nopaste<cr>
 set pastetoggle=<F4>
 " Emacs-like beginning and end of line.
 imap <c-e> <c-o>$
