@@ -23,23 +23,6 @@ set dir=~/.vim/swp//
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-:au BufReadPost * if exists("b:current_syntax")
-:au BufReadPost *   if b:current_syntax == "verilog"
-:au BufReadPost *     let verilog_minlines = 50
-:au BufReadPost *     syntax on
-:au BufReadPost *   endif
-:au BufReadPost * endif
-
-:au BufReadPost * if exists("b:current_syntax")
-:au BufReadPost *   if b:current_syntax == "vhdl"
-:au BufReadPost *     let verilog_minlines = 50
-:au BufReadPost *     syntax on
-:au BufReadPost *   endif
-:au BufReadPost * endif
-
-"associate more wierd sv files ending with the language
-:autocmd  BufNewFile,BufRead *.sv* setfiletype systemverilog
-
 "Turn color highlighting on
 syntax on
 
@@ -85,7 +68,7 @@ set nowrap
 set shiftwidth=2
 "Set spaces to insert when inserting spaces between literals <ctrl-TAB>
 set softtabstop=2 " makes the spaces feel like real tabs, i.e. backspace deletes 2 spaces
-set tabstop=8 " Force tabs to be displayed/expanded to 4 spaces (instead of default 8).
+set tabstop=4 " Force tabs to be displayed/expanded to 4 spaces (instead of default 8).
 set shiftround
 set expandtab
 set autoindent
@@ -139,10 +122,6 @@ nmap <leader>s<down>   :rightbelow new<CR>
 set list
 set lcs=tab:??   "show tabs
 set lcs+=trail:? "show trailing spaces
-
-" When nonempty, this option determines the content of the status line
-"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
-"set statusline=%F%m%r%h%w\ [HEX=%02.2B]\ [POS=%04l,%04v]
 
 
 "Turn completion popup off 
@@ -255,10 +234,6 @@ imap <c-a> <c-o>^
 " not needed with incsearch plugin
 " map <F2>  :noh <CR> 
 
-"map <F9>  :!ct co %
-"map <F10> :!ct ci %
-"map <F11> :!ct co -unre %
-"map <F12> :!ct unco -keep %
 " list buffer then choose one
 :nnoremap <F5> :buffers<CR>:buffer<Space>
 ":nnoremap <F6> :NERDTreeFind<CR>
@@ -316,26 +291,12 @@ let g:airline#extensions#ale#enabled = 1
 "open loclist  
 let g:ale_open_list = 1
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"
-" ABBREVIATIONS
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-":ab #b #######################################
-":ab /b //=====================================
-":ab b= =======================================
-
-"Turn off the f***ing beeping!
-"set vb
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 " MISC
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set noerrorbells
 set visualbell
-"set t_vb='' "-this doesn't seem to work
 autocmd VimEnter * set vb t_vb=
 
 
