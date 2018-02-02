@@ -286,10 +286,20 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
 
 
-""""""""""""""""" ALE  """"""""""""""""""""""""""""""""""
+""""""""""""""""" ALE """"""""""""""""""""""""""""""""""
 let g:airline#extensions#ale#enabled = 1
 "open loclist  
 let g:ale_open_list = 1
+
+
+""""""""""""""""" easy align """"""""""""""""""""""""""""""""""
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
 
 "
 " MISC
