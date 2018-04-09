@@ -373,6 +373,7 @@ Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'kshenoy/vim-signature' 
 Plug 'honza/vim-snippets' 
 Plug 'christoomey/vim-tmux-navigator' 
+Plug 'liuchengxu/space-vim-dark'
 
 call plug#end()
 "indentline plugin setting

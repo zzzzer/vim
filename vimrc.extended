@@ -10,9 +10,9 @@
 " Same, but also show tabs and trailing spaces.
 :set list listchars=tab:>-,trail:.,precedes:<,extends:>
 
+:colorscheme space-vim-dark
 if has("gui_running")
-  set background=dark
-  :colorscheme solarized
+  :colorscheme space-vim-dark
 let g:NERDTreeDirArrows=0
 " jump to previous windows after opening nerdtree 
 autocmd VimEnter * wincmd p
