@@ -16,7 +16,7 @@
 "let g:pymode_syntax_highlight_exceptions = g:pymode_syntax_all
 "let g:pymode_syntax_docstrings = g:pymode_syntax_all
 "let g:pymode_rope_goto_definition_cmd = 'vnew'
-hi pythonSelf  ctermfg=68  guifg=#5f87d7 cterm=bold gui=bold
+let g:python_highlight_all = 1
 autocmd FileType python nnoremap <LocalLeader>= :0,$!/home/eashmia/usr/local/bin/yapf<CR>
 autocmd FileType python nnoremap <LocalLeader>i :!/home/eashmia/usr/local/bin/isort %<CR><CR>
 

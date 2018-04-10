@@ -4,8 +4,7 @@ set viminfo=%,'50,\"100,n~/.viminfo
 "
 " DIRECTORIES AND FILES
 "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"put swap files in a fixed place
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" "put swap files in a fixed place
 set dir=~/.vim/swp//
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" "
@@ -172,6 +171,7 @@ let g:call_arg        = 'Default CALL_ARG'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let mapleader="\<Space>"
+let maplocalleader="\<Space>"
 
 
 "editing files using relative path to file
@@ -374,6 +374,7 @@ Plug 'kshenoy/vim-signature'
 Plug 'honza/vim-snippets' 
 Plug 'christoomey/vim-tmux-navigator' 
 Plug 'liuchengxu/space-vim-dark'
+Plug 'vim-python/python-syntax'
 
 call plug#end()
 "indentline plugin setting
