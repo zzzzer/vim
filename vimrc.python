@@ -17,6 +17,6 @@
 "let g:pymode_syntax_docstrings = g:pymode_syntax_all
 "let g:pymode_rope_goto_definition_cmd = 'vnew'
 let g:python_highlight_all = 1
-autocmd FileType python nnoremap <LocalLeader>= :0,$!/home/eashmia/usr/local/bin/yapf<CR>
-autocmd FileType python nnoremap <LocalLeader>i :!/home/eashmia/usr/local/bin/isort %<CR><CR>
+autocmd FileType python nnoremap <Leader>= :0,$!/home/eashmia/usr/local/bin/yapf<CR>
+autocmd FileType python nnoremap <Leader>i :!/home/eashmia/usr/local/bin/isort %<CR><CR>
 

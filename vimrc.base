@@ -171,7 +171,6 @@ let g:call_arg        = 'Default CALL_ARG'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let mapleader="\<Space>"
-let maplocalleader="\<Space>"
 
 
 "editing files using relative path to file
