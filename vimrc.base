@@ -238,12 +238,12 @@ imap <c-a> <c-o>^
 ":nnoremap <F6> :NERDTreeFind<CR>
 " TAGS
 "jump to tag
-map <A-.> 
+map <Leader>. 
 
-map <A-'> 
-map <A-:> :ts 
-map <A-_> }
-map <A--> :pc
+map <Leader>' 
+map <Leader>: :ts 
+map <Leader>_ }
+map <Leader>- :pc
 
 " :Q => :q 
 command! Q q
