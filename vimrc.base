@@ -142,6 +142,9 @@ set directory=~/.vim/tmp//
 
 let $TMPDIR="~/.vim/tmp"
 
+set undodir=~/.vim/undodir
+set undofile
+
 
 :au BufWritePre * let &backupext = '_' . strftime("%Y%m%d_%Hh")
 
@@ -356,10 +359,10 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree' 
 Plug 'fs111/pydoc.vim' 
 Plug 'godlygeek/tabular' 
-Plug 'majutsushi/tagbar' 
+"Plug 'majutsushi/tagbar' 
 Plug 'mbbill/undotree' 
-Plug 'jmcneal/verilog-support' 
 Plug 'vhda/verilog_systemverilog.vim' 
+Plug 'jmcneal/verilog-support' 
 Plug 'bling/vim-airline' 
 Plug 'vim-airline/vim-airline-themes' 
 Plug 'sophacles/vim-bundle-mako' 
@@ -386,4 +389,5 @@ call plug#end()
  let g:indentLine_bgcolor_term = 202
  let g:indentLine_bgcolor_gui = '#FF5F00'
  let g:indentLine_enabled = 0
+ let g:verilog_syntax_fold_lst = 'all'
 
