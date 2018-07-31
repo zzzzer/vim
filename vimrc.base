@@ -377,6 +377,7 @@ Plug 'honza/vim-snippets'
 Plug 'christoomey/vim-tmux-navigator' 
 Plug 'liuchengxu/space-vim-dark'
 Plug 'vim-python/python-syntax'
+Plug 'michaeljsmith/vim-indent-object'
 
 call plug#end()
 "indentline plugin setting
