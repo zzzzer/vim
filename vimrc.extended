@@ -38,8 +38,9 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 map <leader>tt <Plug>TaskList
 set rtp+=~/.fzf
 
-"ack/ag setup
-let g:ackprg = 'ag --vimgrep'
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 
 "ctrl p plugin 
